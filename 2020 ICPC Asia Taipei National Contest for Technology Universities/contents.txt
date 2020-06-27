@@ -1,0 +1,45 @@
+# Any line followed by a '#' character is ignored
+# Section headings must be in square brackets
+# Subsections within a section should follow the format:
+#   [filename within code directory][tab character \t][subsection title]
+
+[Dynamic programming algorithms]
+longest_common_subsequence.cc	Longest common subsequence
+
+[Geometry]
+convex_hull.cc	Convex hull
+geometry.cc	Miscellaneous geometry
+
+[Numerical algorithms]
+euclid.cc	Number theory (modular, Chinese remainder, linear Diophantine)
+gauss_jordan.cc	Systems of linear equations, matrix inverse, determinant
+reduced_row_echelon_form.cc	Reduced row echelon form, matrix rank
+fast_fourier_transform.cc	Fast Fourier transform
+simplex.cc	Simplex algorithm
+
+[Graph algorithms]
+bellman_ford.cc	Bellman-Ford shortest paths with negative edge weights
+fast_dijkstra.cc	Fast Dijkstra's algorithm
+strongly_connected_components.cc	Strongly connected components
+eulerian_path.cc	Eulerian path
+kruskal.cc	Kruskal's algorithm
+prim.cc	Minimum spanning trees
+
+[Data structures]
+suffix_array.cc	Suffix array
+fenwick_tree.cc	Binary Indexed (Fenwick) Tree
+union_find_disjoint_sets.cc	Union-find disjoint sets
+kd_tree.cc	KD-tree
+splay_tree.cc	Splay tree
+SegmentTreeLazy.java	Segment tree lazy (Java)
+lowest_common_ancestor.cc	Lowest common ancestor
+
+[Miscellaneous]
+longest_increasing_subsequence.cc	Longest increasing subsequence
+knuth_morris_pratt.cc	Knuth-Morris-Pratt
+dates.cc	Dates
+primes.cc	Prime numbers
+latitude_longitude.cc	Latitude/longitude
+cpp_input_output.cc	C++ input/output
+random_stl.cc	Random STL stuff
+LogicalLanguageSolution.java	Regular expressions (Java)
