@@ -5,6 +5,7 @@
 
 [Dynamic programming algorithms]
 longest_common_subsequence.cc	Longest common subsequence
+max_2d_range_sum.cc	Max 2D range sum
 
 [Geometry]
 convex_hull.cc	Convex hull
