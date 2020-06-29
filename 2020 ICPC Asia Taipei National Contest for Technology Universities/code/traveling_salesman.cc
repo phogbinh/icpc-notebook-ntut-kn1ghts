@@ -5,7 +5,7 @@
 // the other n − 1 cities exactly once, and finally returns to the city s. In
 // this case, the salesman is Karel in a 2D world who can only move along the
 // x and y axis. The cities are beepers whose coordinates are given, from which
-// pairwise distances can be calculated.
+// pairwise distances can be calculated. Algorithm takes time O(2^n * n^2).
 // INPUT: The first line is the number of test cases. The first line of each
 // test case is world's size (x-size and y-size). Next is the starting position
 // of Karel. Next is the number of beepers. Next are the beepers' x- and y-
