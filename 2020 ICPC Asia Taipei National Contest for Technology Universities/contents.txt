@@ -7,6 +7,7 @@
 longest_common_subsequence.cc	Longest common subsequence
 max_2d_range_sum.cc	Max 2D range sum
 0_1_knapsack.cc	0-1 Knapsack
+traveling_salesman.cc	Traveling salesman
 
 [Geometry]
 convex_hull.cc	Convex hull
