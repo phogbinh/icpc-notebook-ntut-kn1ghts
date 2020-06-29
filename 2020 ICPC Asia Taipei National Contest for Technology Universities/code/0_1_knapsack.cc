@@ -1,4 +1,5 @@
-// 0-1 Knapsack solved using top-down DP O(n*W).
+// This is a solution for UVa 10130 - SuperSale. This is a 0-1 Knapsack variant
+// solved using top-down DP O(n*W).
 
 #include <bits/stdc++.h>
 using namespace std;
