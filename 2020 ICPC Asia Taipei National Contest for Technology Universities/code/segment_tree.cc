@@ -1,4 +1,4 @@
-// This is a solution for UVa12299 - RMQ with Shifts. In this problem, we are
+// This is a solution for UVa 12299 - RMQ with Shifts. In this problem, we are
 // given an array of integers A and a list of queries of 2 types:
 //     1. query(L, R) returns the minimum value in A[L...R].
 //     2. shift(i_1, i_2, ..., i_k) performs a left "circular shift" of A[i_1],
