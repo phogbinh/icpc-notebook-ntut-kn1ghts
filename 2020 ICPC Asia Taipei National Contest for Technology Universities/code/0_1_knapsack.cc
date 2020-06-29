@@ -1,4 +1,4 @@
-// 0-1 Knapsack solved using top-down DP.
+// 0-1 Knapsack solved using top-down DP O(n*W).
 
 #include <bits/stdc++.h>
 using namespace std;
