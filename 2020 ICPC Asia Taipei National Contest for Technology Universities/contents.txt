@@ -31,7 +31,7 @@ fenwick_tree.cc	Binary Indexed (Fenwick) Tree
 union_find_disjoint_sets.cc	Union-find disjoint sets
 kd_tree.cc	KD-tree
 splay_tree.cc	Splay tree
-SegmentTreeLazy.java	Segment tree lazy (Java)
+segment_tree.cc	Segment tree
 lowest_common_ancestor.cc	Lowest common ancestor
 
 [Miscellaneous]
