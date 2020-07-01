@@ -2,7 +2,7 @@
 // variant of the Traveling Salesman Problem (TSP): Given n cities and their
 // pairwise distances in the form of a matrix 'dist' of size n * n, compute the
 // minimum cost of making a tour that starts from any city s, goes through all
-// the other n − 1 cities exactly once, and finally returns to the city s. In
+// the other n - 1 cities exactly once, and finally returns to the city s. In
 // this case, the salesman is Karel in a 2D world who can only move along the
 // x and y axis. The cities are beepers whose coordinates are given, from which
 // pairwise distances can be calculated. Algorithm takes time O(2^n * n^2).
