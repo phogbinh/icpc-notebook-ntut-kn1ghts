@@ -8,100 +8,129 @@
 
 #include <bits/stdc++.h>
 
-#define LEFT_CHILD(x) ((x << 1) + 1)
-#define RIGHT_CHILD(x) ((x << 1) + 2)
+#define LOCAL
+#define Lson(x) ((x << 1) + 1)
+#define Rson(x) ((x << 1) + 2)
 #define INF 99999999
-#define MAX_N 100005
 
 using namespace std;
 
-int queryParams[35], numbers[MAX_N], queryParamsCount;
-string inputQuery;
+const int N = 100005;
+int shift[35], num[N], len_shift;
+string strLine;
 
-struct node_t {
-    int left, right, minValue;
-} nodes[4 * MAX_N];
+struct Node {
+    int left, right, Min_Value;
+} node[4 * N];
 
 void build(int left, int right, int x = 0) {
-    nodes[x].left = left;
-    nodes[x].right = right;
+    node[x].left = left;
+    node[x].right = right;
     if (left == right) {
-        nodes[x].minValue = numbers[left];
+        node[x].Min_Value = num[left];
         return;
     }
     int mid = (left + right) / 2;
-    build(left, mid, LEFT_CHILD(x));
-    build(mid + 1, right, RIGHT_CHILD(x));
-    nodes[x].minValue = min(nodes[LEFT_CHILD(x)].minValue, nodes[RIGHT_CHILD(x)].minValue);
+
+    //debug
+    //cout << mid << '\n' ;
+    //cout << x << ' ' << node[x].left << ' ' << node[x].right << ' ' << '\n' ;
+
+    build(left, mid, Lson(x));
+    build(mid + 1, right, Rson(x));
+    node[x].Min_Value = min(node[Lson(x)].Min_Value, node[Rson(x)].Min_Value);
 }
 
-void parseInputQuery() {
-    queryParamsCount = 0;
-    queryParams[queryParamsCount] = 0;
-    // Parse input query starting from after opening parenthesis i.e. index 6.
-    for (int i = 6; i < inputQuery.length(); i++) {
-        if ('0' <= inputQuery[i] && inputQuery[i] <= '9') {
-            queryParams[queryParamsCount] = queryParams[queryParamsCount] * 10 + (int)(inputQuery[i] - '0');
-        }
-        else {
-            queryParams[++queryParamsCount] = 0; // next query parameter!
+void handle() {
+    len_shift = 0;
+    shift[len_shift] = 0;
+    for (int i = 6; i < strLine.length(); i++) {
+        if (strLine[i] >= '0' && strLine[i] <= '9') {
+            shift[len_shift] = shift[len_shift] * 10 + (int)(strLine[i] - '0');
+        } else {
+            shift[++len_shift] = 0;
         }
     }
+    //finaly char is ')' , so len_shift is right
+    sort(shift, shift + len_shift);
+
+    //debug
+    /**<
+    for(int i = 0 ; i < len_shift ; i++)
+        cout << shift[i] << ' ' ;
+    cout << '\n' ;
+    */
 }
 
 int query(int left, int right, int x = 0) {
-    if (left <= nodes[x].left && nodes[x].right <= right) {
-        return nodes[x].minValue;
-    }
-    int mid = (nodes[x].left + nodes[x].right) / 2;
+    if (node[x].left >= left && node[x].right <= right)
+        return node[x].Min_Value;
+    int mid = (node[x].left + node[x].right) / 2;
     int ans = INF;
-    if (left <= mid) {
-        ans = min(ans, query(left, right, LEFT_CHILD(x)));
-    }
-    if (mid < right) {
-        ans = min(ans, query(left, right, RIGHT_CHILD(x)));
-    }
+
+    //debug
+    //cout << x << ' ' << node[x].left << ' ' << node[x].right << ' ' << node[x].Min_Value << '\n' ;
+
+    if (left <= mid)
+        ans = min(ans, query(left, right, Lson(x)));
+    if (mid < right)
+        ans = min(ans, query(left, right, Rson(x)));
     return ans;
 }
 
-void setValue(int position, int newValue, int x = 0) {
-    if (nodes[x].left == position && nodes[x].right == position) {
-       nodes[x].minValue = newValue;
-       return;
+void set_num(int position, int value, int x = 0) {
+    if (node[x].left == position && node[x].right == position) {
+        node[x].Min_Value = value;
+        return;
     }
-    int mid = (nodes[x].left + nodes[x].right) / 2;
-    if (position <= mid) {
-        setValue(position, newValue, LEFT_CHILD(x));
-    }
-    if (mid < position) {
-        setValue(position, newValue, RIGHT_CHILD(x));
-    }
-    nodes[x].minValue = min(nodes[LEFT_CHILD(x)].minValue, nodes[RIGHT_CHILD(x)].minValue);
+    int mid = (node[x].left + node[x].right) / 2;
+    if (position <= mid)
+        set_num(position, value, Lson(x));
+    if (mid < position)
+        set_num(position, value, Rson(x));
+    node[x].Min_Value = min(node[Lson(x)].Min_Value, node[Rson(x)].Min_Value);
 }
 
-int main()
-{
-    int n, q, placeholder;
+int main() {
+    int n, q, intTemp;
+    ios::sync_with_stdio(0);
+#ifdef LOCAL
+    freopen("out.txt", "w", stdout);
+    freopen("in1.txt", "r", stdin);
+#endif  // LOCAL
     cin >> n >> q;
-    for (int i = 1; i <= n; i++) {
-        cin >> numbers[i];
-    }
+    for (int i = 1; i <= n; i++)
+        cin >> num[i];
     build(1, n);
+
+    //debug
+    /**<
+    for(int i = 0 ; i < 13 ; i++){
+        cout << node[i].left << ' ' << node[i].right << ' ' << node[i].Min_Value << '\n' ;
+    }
+    return 0 ;
+    */
+
     while (q--) {
-        cin >> inputQuery;
-        if (inputQuery[0] == 'q') { // perform operation query.
-            parseInputQuery();
-            cout << query(queryParams[0], queryParams[1]) << '\n';
-        }
-        else if (inputQuery[0] == 's') { // perform operation shift.
-            parseInputQuery();
-            placeholder = numbers[queryParams[0]];
-            for (int i = 1; i < queryParamsCount; i++) {
-                setValue(queryParams[i - 1], numbers[queryParams[i]]);
-                numbers[queryParams[i - 1]] = numbers[queryParams[i]];
+        cin >> strLine;
+        if (strLine[0] == 'q') {
+            handle();
+            cout << query(shift[0], shift[1]) << '\n';
+        } else if (strLine[0] == 's') {
+            handle();
+            intTemp = num[shift[0]];
+
+            for (int i = 1; i < len_shift; i++) {
+                set_num(shift[i - 1], num[shift[i]]);
+                num[shift[i - 1]] = num[shift[i]];
             }
-            setValue(queryParams[queryParamsCount - 1], placeholder);
-            numbers[queryParams[queryParamsCount - 1]] = placeholder;
+            num[shift[len_shift - 1]] = intTemp;
+            set_num(shift[len_shift - 1], intTemp);
+
+            //debug
+            //cout << intTemp << ' ' << shift[len_shift-1] << '\n' ;
+            //for(int i = 1 ; i <= n ; i++)
+            //   cout << num[i] << ' ' ;
         }
     }
     return 0;
