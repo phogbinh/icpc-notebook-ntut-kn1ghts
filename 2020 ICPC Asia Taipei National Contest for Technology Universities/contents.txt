@@ -44,6 +44,7 @@ lowest_common_ancestor.cc	Lowest common ancestor
 [Miscellaneous]
 dijkstra_struct.cc	Dijkstra's algorithm using struct
 longest_increasing_subsequence.cc	Longest increasing subsequence
+interval_covering.cc	Interval covering
 knuth_morris_pratt.cc	Knuth-Morris-Pratt
 dates.cc	Dates
 primes.cc	Prime numbers
