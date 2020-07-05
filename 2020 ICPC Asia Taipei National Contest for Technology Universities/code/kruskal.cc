@@ -1,89 +1,70 @@
-/*
-Uses Kruskal's Algorithm to calculate the weight of the minimum spanning
-forest (union of minimum spanning trees of each connected component) of
-a possibly disjoint graph, given in the form of a matrix of edge weights
-(-1 if no edge exists). Returns the weight of the minimum spanning
-forest (also calculates the actual edges - stored in T). Note: uses a
-disjoint-set data structure with amortized (effectively) constant time per
-union/find. Runs in O(E*log(E)) time.
-*/
+// This is a solution for UVa 11747 - Heavy Cycle Edges. Abridged problem
+// description: Undirected graph. Generate Minimum Spanning Tree (MST).
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <queue>
+#include <bits/stdc++.h>
+
+#define LOCAL
+#define ll long long
 
 using namespace std;
 
-typedef int T;
+int parent[1020];
 
-struct edge
-{
-  int u, v;
-  T d;
-};
+struct edge {
+    ll n1, n2, w;
+} node[25020];
 
-struct edgeCmp
-{
-  int operator()(const edge& a, const edge& b) { return a.d > b.d; }
-};
-
-int find(vector <int>& C, int x) { return (C[x] == x) ? x : C[x] = find(C, C[x]); }
-
-T Kruskal(vector <vector <T> >& w)
-{
-  int n = w.size();
-  T weight = 0;
-  
-  vector <int> C(n), R(n);
-  for(int i=0; i<n; i++) { C[i] = i; R[i] = 0; }
-  
-  vector <edge> T;
-  priority_queue <edge, vector <edge>, edgeCmp> E;
-  
-  for(int i=0; i<n; i++)
-    for(int j=i+1; j<n; j++)
-      if(w[i][j] >= 0)
-      {
-        edge e;
-        e.u = i; e.v = j; e.d = w[i][j];
-        E.push(e);
-      }
-      
-  while(T.size() < n-1 && !E.empty())
-  {
-    edge cur = E.top(); E.pop();
-    
-    int uc = find(C, cur.u), vc = find(C, cur.v);
-    if(uc != vc)
-    {
-      T.push_back(cur); weight += cur.d;
-      
-      if(R[uc] > R[vc]) C[vc] = uc;
-      else if(R[vc] > R[uc]) C[uc] = vc;
-      else { C[vc] = uc; R[uc]++; }
-    }
-  }
-  
-  return weight;
+int compare(edge A, edge B) {
+    return A.w < B.w;
 }
 
-int main()
-{
-  int wa[6][6] = {
-    { 0, -1, 2, -1, 7, -1 },
-    { -1, 0, -1, 2, -1, -1 },
-    { 2, -1, 0, -1, 8, 6 },
-    { -1, 2, -1, 0, -1, -1 },
-    { 7, -1, 8, -1, 0, 4 },
-    { -1, -1, 6, -1, 4, 0 } };
-    
-  vector <vector <int> > w(6, vector <int>(6));
-  
-  for(int i=0; i<6; i++)
-    for(int j=0; j<6; j++)
-      w[i][j] = wa[i][j];
-    
-  cout << Kruskal(w) << endl;
-  cin >> wa[0][0];
+int find_root(int a) {
+    if (a != parent[a])
+        return parent[a] = find_root(parent[a]);
+    return a;
+}
+
+int main() {
+#ifdef LOCAL
+    freopen("in1.txt", "r", stdin);
+    freopen("out.txt", "w", stdout);
+#endif                     // LOCAL
+    int n, m, p_n1, p_n2;  // parent_n1 , parent_n2
+    vector<int> hce;       //heavy edge circle
+    while (cin >> n >> m && n + m != 0) {
+        for (int i = 0; i < m; i++) {
+            cin >> node[i].n1 >> node[i].n2 >> node[i].w;
+        }
+
+        for (int i = 0; i < n; i++)
+            parent[i] = i;
+        sort(node, node + m, compare);
+        hce.clear();
+
+        //kruskal
+        for (int i = 0; i < m; i++) {
+            p_n1 = find_root(node[i].n1);
+            p_n2 = find_root(node[i].n2);
+            if (p_n1 != p_n2)
+                parent[p_n2] = p_n1;
+            else
+                hce.push_back(node[i].w);
+
+            //debug
+            /**<
+            for(int i = 0 ; i < n ; i++)
+                cout << parent[i] << ' ' ;
+            cout << '\n' ;
+            */
+        }
+        sort(hce.begin(), hce.end());
+        if (hce.size()) {
+            for (int i = 0; i < hce.size() - 1; i++)
+                cout << hce[i] << ' ';
+            cout << hce[hce.size() - 1];
+        } else
+            cout << "forest";
+        cout << '\n';
+    }
+    return 0;
 }
