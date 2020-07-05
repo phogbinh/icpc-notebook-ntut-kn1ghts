@@ -23,6 +23,7 @@ simplex.cc	Simplex algorithm
 [Graph algorithms]
 bellman_ford.cc	Bellman-Ford shortest paths with negative edge weights
 fast_dijkstra.cc	Fast Dijkstra's algorithm
+floyd_warshall.cc	Floyd-Warshall's algorithm
 strongly_connected_components.cc	Strongly connected components
 eulerian_path.cc	Eulerian path
 kruskal.cc	Kruskal's algorithm
