@@ -21,6 +21,7 @@ fast_fourier_transform.cc	Fast Fourier transform
 simplex.cc	Simplex algorithm
 
 [Graph algorithms]
+dfs.cc	Depth-first search (DFS)
 bellman_ford.cc	Bellman-Ford shortest paths with negative edge weights
 fast_dijkstra.cc	Fast Dijkstra's algorithm
 floyd_warshall.cc	Floyd-Warshall's algorithm
