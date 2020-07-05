@@ -38,6 +38,7 @@ segment_tree.cc	Segment tree
 lowest_common_ancestor.cc	Lowest common ancestor
 
 [Miscellaneous]
+dijkstra_struct.cc	Dijkstra's algorithm using struct
 longest_increasing_subsequence.cc	Longest increasing subsequence
 knuth_morris_pratt.cc	Knuth-Morris-Pratt
 dates.cc	Dates
