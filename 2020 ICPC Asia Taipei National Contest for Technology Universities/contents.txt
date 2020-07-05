@@ -27,7 +27,7 @@ floyd_warshall.cc	Floyd-Warshall's algorithm
 strongly_connected_components.cc	Strongly connected components
 eulerian_path.cc	Eulerian path
 kruskal.cc	Kruskal's algorithm
-prim.cc	Minimum spanning trees
+prim.cc	Prim's algorithm
 
 [Data structures]
 suffix_array.cc	Suffix array
