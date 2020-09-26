@@ -32,6 +32,7 @@ Z-algorithm.cc	Z-algorithm
 [Data structures]
 rope.cc	Rope
 disjoint_set.cc	Union-find disjoint sets (UFDS) by David
+Segment_tree.cc	Segment tree
 ufds.cc	Union-find disjoint sets (UFDS) by Bill
 
 [Utilities]
