@@ -35,6 +35,7 @@ Z-algorithm.cc	Z-algorithm
 
 [Data structures]
 disjoint_set.cc	Union-find disjoint sets (UFDS) by David
+fenwick_tree.cc	Binary indexed/fenwick tree (BIT)
 rope.cc	Rope
 Segment_tree.cc	Segment tree
 ufds.cc	Union-find disjoint sets (UFDS) by Bill
