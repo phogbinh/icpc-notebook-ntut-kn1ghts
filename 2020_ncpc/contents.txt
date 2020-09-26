@@ -23,6 +23,9 @@ mcbm.cc	Max cardinality bipartite matching (MCBM)
 mst.cc	Minimum Spanning Tree (MST)
 scc.cc	Strongly connected component (SCC)
 
+[Greedy algorithms]
+lis.cc	Longest increasing subsequence (LIS)
+
 [String algorithms]
 Z-algorithm.cc	Z-algorithm
 
