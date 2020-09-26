@@ -4,51 +4,33 @@
 #   [filename within code directory][tab character \t][subsection title]
 
 [Dynamic programming algorithms]
-longest_common_subsequence.cc	Longest common subsequence
-max_2d_range_sum.cc	Max 2D range sum
-0_1_knapsack.cc	0-1 Knapsack
-traveling_salesman.cc	Traveling salesman
-longest_palindrome.cc	Longest palindrome
-
-[Geometry]
-convex_hull.cc	Convex hull
-geometry.cc	Miscellaneous geometry
-
-[Numerical algorithms]
-euclid.cc	Number theory (modular, Chinese remainder, linear Diophantine)
-gauss_jordan.cc	Systems of linear equations, matrix inverse, determinant
-reduced_row_echelon_form.cc	Reduced row echelon form, matrix rank
-fast_fourier_transform.cc	Fast Fourier transform
-simplex.cc	Simplex algorithm
+LCS.cc	Longest common subsequence (LCS)
 
 [Graph algorithms]
-dfs.cc	Depth-first search (DFS)
-bfs.cc	Breadth-first search (BFS)
-bellman_ford.cc	Bellman-Ford shortest paths with negative edge weights
-fast_dijkstra.cc	Fast Dijkstra's algorithm
-floyd_warshall.cc	Floyd-Warshall's algorithm
-strongly_connected_components.cc	Strongly connected components
-eulerian_path.cc	Eulerian path
-kruskal.cc	Kruskal's algorithm
-prim.cc	Prim's algorithm
+apsp.cc	All-pairs shortest paths (APSP)
+centroid_decomposition.cc	Centroid decomposition
+detect_negative_weight_cycle.cc	Detect negative weight cycle
+DFS.cc	DFS
+dijkstra.cc	Dijkstra by Bill
+Dijkstra.cc	Dijkstra by David
+euler_tour.cc	Euler tour
+find_articulation_points_n_bridges.cc	Find articulation points and bridges
+floyd.cc	Floyd Warshall by David
+graph_edges_property_check.cc	Graph edges property check
+kruskal.cc	Kruskal by David
+max_flow.cc	Max flow
+mcbm.cc	Max cardinality bipartite matching (MCBM)
+mst.cc	Minimum Spanning Tree (MST)
+scc.cc	Strongly connected component (SCC)
+
+[String algorithms]
+Z-algorithm.cc	Z-algorithm
 
 [Data structures]
-suffix_array.cc	Suffix array
-fenwick_tree.cc	Binary Indexed (Fenwick) Tree
-union_find_disjoint_sets.cc	Union-find disjoint sets
-kd_tree.cc	KD-tree
-splay_tree.cc	Splay tree
-segment_tree.cc	Segment tree
-lowest_common_ancestor.cc	Lowest common ancestor
+rope.cc	Rope
+disjoint_set.cc	Union-find disjoint sets (UFDS) by David
+ufds.cc	Union-find disjoint sets (UFDS) by Bill
 
-[Miscellaneous]
-dijkstra_struct.cc	Dijkstra's algorithm using struct
-longest_increasing_subsequence.cc	Longest increasing subsequence
-interval_covering.cc	Interval covering
-knuth_morris_pratt.cc	Knuth-Morris-Pratt
-dates.cc	Dates
+[Utilities]
+bit_manipulation.cc	Bit manipulation
 primes.cc	Prime numbers
-latitude_longitude.cc	Latitude/longitude
-cpp_input_output.cc	C++ input/output
-random_stl.cc	Random STL stuff
-LogicalLanguageSolution.java	Regular expressions (Java)
