@@ -5,6 +5,8 @@
 
 [Dynamic programming algorithms]
 LCS.cc	Longest common subsequence (LCS)
+max_2d_range_sum.cc	Max 2D range sum
+tsp.cc	Traveling salesman problem (TSP)
 
 [Graph algorithms]
 apsp.cc	All-pairs shortest paths (APSP)
@@ -20,21 +22,25 @@ graph_edges_property_check.cc	Graph edges property check
 kruskal.cc	Kruskal by David
 max_flow.cc	Max flow
 mcbm.cc	Max cardinality bipartite matching (MCBM)
-mst.cc	Minimum Spanning Tree (MST)
+mst.cc	Minimum spanning tree (MST)
 scc.cc	Strongly connected component (SCC)
 
 [Greedy algorithms]
+interval_covering.cc	Interval covering
 lis.cc	Longest increasing subsequence (LIS)
+max_1d_range_sum.cc	Max 1D range sum
 
 [String algorithms]
 Z-algorithm.cc	Z-algorithm
 
 [Data structures]
-rope.cc	Rope
 disjoint_set.cc	Union-find disjoint sets (UFDS) by David
+rope.cc	Rope
 Segment_tree.cc	Segment tree
 ufds.cc	Union-find disjoint sets (UFDS) by Bill
 
 [Utilities]
 bit_manipulation.cc	Bit manipulation
+cpp_input_output.cc	C++ input output
+cpp_stl.cc	C++ STL
 primes.cc	Prime numbers
