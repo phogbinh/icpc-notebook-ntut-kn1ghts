@@ -1,4 +1,3 @@
-
 // Dijkstra implementation for negative weight edges O((V + E) log V)
     vi dist(V, INF); dist[s] = 0;
     priority_queue< ii, vii, greater<ii> > pq;
