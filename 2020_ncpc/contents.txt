@@ -10,11 +10,12 @@ tsp.cc	Traveling salesman problem (TSP)
 
 [Graph algorithms]
 apsp.cc	All-pairs shortest paths (APSP)
+BFSBMP.cc	Bipartite matching BFS by David
 centroid_decomposition.cc	Centroid decomposition
 detect_negative_weight_cycle.cc	Detect negative weight cycle
 DFS.cc	DFS
 dijkstra.cc	Dijkstra by Bill
-Dijkstra.cc	Dijkstra by David
+dijkstra_by_David.cc	Dijkstra by David
 euler_tour.cc	Euler tour
 find_articulation_points_n_bridges.cc	Find articulation points and bridges
 floyd.cc	Floyd Warshall by David
