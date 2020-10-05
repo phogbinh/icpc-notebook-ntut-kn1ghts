@@ -19,6 +19,7 @@ int Aug(int l)    // return 1 if an augmenting path is found & 0 otherwise
 
 // inside int main()
     // build unweighted bipartite graph with directed edge left->right set
+    // left vertices [0..N-1], right vertices [N..V-1]
     int MCBM = 0;
     match.assign(V, -1); // V is the number of vertices in bipartite graph
     for (int l = 0; l < N; ++l)    // N = size of the left set
