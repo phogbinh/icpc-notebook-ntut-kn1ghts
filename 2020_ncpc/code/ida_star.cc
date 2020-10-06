@@ -1,3 +1,4 @@
+// UVa 10181 - 15-Puzzle Problem solved with Iterative Deepening A* (IDA*).
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -58,12 +59,12 @@ int Delta_H(int cur_r, int cur_c, int next_r, int next_c)
 bool dfs(int g, int h, int b_pos)
 {
     if (g + h > lim) return false;
-    if (h == 0) return true;    // found a solution!
+    if (h == 0) return true;       // found a solution!
     int r = b_pos / N;
     int c = b_pos % N;
     for (int d = 0; d < DIR; ++d)
     {
-        if ( g != 0 && d == (pred[g] ^ 2) ) continue; // abort if this direction gets us back to parent state
+        if ( g != 0 && d == (pred[g] ^ 2) ) continue; // this direction gets us back to parent state
         int next_r = r + dr[d];
         int next_c = c + dc[d];
         if ( !isValid(next_r, next_c) ) continue;
