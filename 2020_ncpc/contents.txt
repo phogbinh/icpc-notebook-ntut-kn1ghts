@@ -46,4 +46,4 @@ bit_manipulation.cc	Bit manipulation
 cpp_input_output.cc	C++ input output
 cpp_stl.cc	C++ STL
 dates.cc	Dates
-primes.cc	Prime numbers
+prime_numbers.cc	Prime numbers
