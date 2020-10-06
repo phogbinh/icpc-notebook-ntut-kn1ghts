@@ -1,4 +1,4 @@
-// ax ≡ 1 (mod b)
+// ax mod b = 1
 // ax + by = 1,x=y=0
 // a,b Relatively Prime
 LL exgcd(LL a,LL b,LL &x,LL &y){
