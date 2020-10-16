@@ -1,0 +1,6 @@
+#define isOn(S, j) (S & (1<<j))
+#define setBit(S, j) (S |= (1<<j))
+#define clearBit(S, j) (S &= ~(1<<j))
+#define toggleBit(S, j) (S ^= (1<<j))
+#define lowBit(S) (S & (-S))
+#define setAll(S, n) (S = (1<<n)-1)

@@ -1,0 +1,65 @@
+# Any line followed by a '#' character is ignored
+# Section headings must be in square brackets
+# Subsections within a section should follow the format:
+#   [filename within code directory][tab character \t][subsection title]
+
+[Advanced algorithms]
+ida_star.cc	Iterative deepening A* (IDA*)
+
+[Dynamic programming algorithms]
+Knapsack.cc	0-1 knapsack
+LCS_UVa1207.cc	Longest common subsequence (LCS)
+max_2d_range_sum.cc	Max 2D range sum
+tsp.cc	Traveling salesman problem (TSP)
+
+[Graph algorithms]
+apsp.cc	All-pairs shortest paths (APSP)
+BFSBMP.cc	Bipartite matching BFS by David
+centroid_decomposition_cf161d.cc	Centroid decomposition
+detect_negative_weight_cycle.cc	Detect negative weight cycle
+DFS.cc	DFS
+DFS_ICPC2019_RussiaPe.cc	DFS ICPC 2019 Russia problem E
+dijkstra.cc	Dijkstra by Bill
+dijkstra_by_David_UVa10603.cc	Dijkstra by David
+euler_tour.cc	Euler tour
+find_articulation_points_n_bridges.cc	Find articulation points and bridges
+floyd_ICPC2019_RussiaPj.cc	Floyd Warshall by David
+graph_edges_property_check.cc	Graph edges property check
+kruskal_UVa11747.cc	Kruskal by David
+max_flow.cc	Max flow
+mcbm.cc	Max cardinality bipartite matching (MCBM)
+mst.cc	Minimum spanning tree (MST)
+scc.cc	Strongly connected component (SCC)
+
+[Greedy algorithms]
+interval_covering.cc	Interval covering
+lis.cc	Longest increasing subsequence (LIS)
+max_1d_range_sum.cc	Max 1D range sum
+
+[Math algorithms]
+Chinese_Remainder_Theorem.cc	Chinese remainder theorem
+extgcd.cc	Extended greatest common divisor (Ext-GCD)
+gcd_and_lcm.cc	Greatest common divisor (GCD) and least common multiple (LCM)
+nCr.cc	N choose R combination (nCr)
+sieve_prime.cc	Sieve of Eratosthenes
+Stirling.cc	Stirling's approximation
+
+[String algorithms]
+KMP_UVa11475.cc	Knuth–Morris–Pratt algorithm
+Longest_Palindromic_Substrings_UVa11151.cc	Longest palindromic substring
+Minimum_Edit_Distance_UVa526.cc	Minimum edit distance
+Z-algorithm_cf126b.cc	Z-algorithm
+
+[Data structures]
+disjoint_set_UVa11987.cc	Union-find disjoint sets (UFDS) by David
+fenwick_tree.cc	Binary indexed/fenwick tree (BIT)
+rope_UVa12538.cc	Rope
+Segment_tree_UVa12299.cc	Segment tree
+ufds.cc	Union-find disjoint sets (UFDS) by Bill
+
+[Utilities]
+bit_manipulation.cc	Bit manipulation
+cpp_input_output.cc	C++ input output
+cpp_stl.cc	C++ STL
+dates.cc	Dates
+prime_numbers.cc	Prime numbers
