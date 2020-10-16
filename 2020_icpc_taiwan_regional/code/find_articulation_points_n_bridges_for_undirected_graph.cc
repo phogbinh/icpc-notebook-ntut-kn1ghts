@@ -1,4 +1,4 @@
-// Find articulation points & bridges solved with DFS O(V + E).
+// Find articulation points & bridges for undirected graph solved with DFS O(V + E).
 void articulationPointAndBridge(int u)
 {
     dfs_low[u] = dfs_num[u] = dfsNumberCounter++;    // dfs_low[u] <= dfs_num[u]
@@ -24,7 +24,7 @@ void articulationPointAndBridge(int u)
 // inside int main()
     dfsNumberCounter = 0;
     dfs_num.assign(V, UNVISITED);
-    dfs_low.assign(v, 0);
+    dfs_low.assign(V, 0);
     dfs_parent.assign(V, 0);
     articulation_vertex.assign(V, 0);
     printf("Bridges:\n");
