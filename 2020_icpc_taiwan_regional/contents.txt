@@ -40,6 +40,7 @@ max_1d_range_sum.cc	Max 1D range sum
 Chinese_Remainder_Theorem.cc	Chinese remainder theorem
 extgcd.cc	Extended greatest common divisor (Ext-GCD)
 gcd_and_lcm.cc	Greatest common divisor (GCD) and least common multiple (LCM)
+generate_list_of_prime_numbers.cc	Generate list of prime numbers
 nCr.cc	N choose R combination (nCr)
 Stirling.cc	Stirling's approximation
 
