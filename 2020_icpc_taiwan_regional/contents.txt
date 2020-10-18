@@ -41,7 +41,6 @@ Chinese_Remainder_Theorem.cc	Chinese remainder theorem
 extgcd.cc	Extended greatest common divisor (Ext-GCD)
 gcd_and_lcm.cc	Greatest common divisor (GCD) and least common multiple (LCM)
 nCr.cc	N choose R combination (nCr)
-sieve_prime.cc	Sieve of Eratosthenes
 Stirling.cc	Stirling's approximation
 
 [String algorithms]
