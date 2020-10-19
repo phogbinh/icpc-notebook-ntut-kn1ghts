@@ -21,7 +21,7 @@ DFS.cc	DFS
 DFS_ICPC2019_RussiaPe.cc	DFS ICPC 2019 Russia problem E
 dijkstra.cc	Dijkstra by Bill
 dijkstra_by_David_UVa10603.cc	Dijkstra by David
-euler_tour.cc	Euler tour
+print_euler_tour.cc	Print Euler tour
 find_articulation_points_n_bridges_for_undirected_graph.cc	Find articulation points and bridges for undirected graph
 floyd_ICPC2019_RussiaPj.cc	Floyd Warshall by David
 graph_edges_property_check.cc	Graph edges property check

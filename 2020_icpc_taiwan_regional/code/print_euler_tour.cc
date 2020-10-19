@@ -1,3 +1,7 @@
+// Given an Eulerian-tour graph - a connected undirected graph whose vertices a-
+// ll have even degrees, produce its Euler tour. The graph is unweighted, stored
+// in an adjacency list where the second attribute in edge info pair is a boole-
+// an '1' (edge can still be used) or '0' (edge can no longer be used).
 list<int> cyc;    // we need list for fast insertion in the middle
 
 void EulerTour(list<int>::iterator i, int u)
@@ -27,6 +31,6 @@ void EulerTour(list<int>::iterator i, int u)
 
 // inside int main()
     cyc.clear();
-    EulerTour(cyc.end(), A);    // 'cyc' contains an Euler tour starting at 'A'
+    EulerTour(cyc.end(), 0);    // 'cyc' contains an Euler tour starting at vertex '0'
     for (list<int>::iterator i = cyc.begin(); i != cyc.end(); ++i)
         printf("%d\n", *i);
