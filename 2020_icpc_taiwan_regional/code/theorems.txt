@@ -1,0 +1,34 @@
+Euler path/tour theorems: An Euler path is a path that visits every edges exact-
+ly once. An Euler tour is an Euler path that starts and ends at the same vertex.
+A graph is an Eulerian-tour graph (i.e. it has an Euler tour) iff all of its ve-
+rtices has even degrees. A graph is an Eulerian-path graph (i.e. it has an Euler
+path) iff all but 2 of its vertices has even degrees.
+
+Euler's handshaking lemma: A graph does not have an Euler tour iff it has an ev-
+en number of vertices of odd degrees.
+
+Two conjunctive normal form (2-CNF) theorem: Given the implication graph of a 2-
+CNF, the formula is satisfiable iff there is no variable that belongs to the sa-
+me strongly connected component (SCC) as its negation.
+
+Bipartite graph related theorems:
+(1) Min vertex cover (MVC) = Max cardinality bipartite matching (MCBM).
+(2) Max independent set (MIS) = V - MCBM.
+(3) The number of spanning tree of a complete bipartite graph K(n,m) is m^(n-1)
+* n^(m-1).
+
+Cayley's formula: There are n^(n-2) spanning trees of a complete graph with n l-
+abeled vertices.
+
+Derangement: A permutation of the elements of a set such that none of the eleme-
+nts appear in their original position. The number of derangements 'der(n)' can
+be computed as follow: der(n) = (n-1) * ( der(n-1) + der(n-2) ) where der(0) = 1
+and der(1) = 0.
+
+Erdos Gallai's theorem: A necessary and sufficient condition for a finite seque-
+nce of natural numbers is the degree sequence of a simple graph. A sequence of
+non-negative integers d_1 >= d_2 >= ... >= d_n can be the degree sequence of a
+simple graph on n vertices iff
+(1) sum[i: 1->n]{d_i} is even, and
+(2) sum[i: 1->k]{d_i} <= k * (k-1) + sum[i: k+1->n]{min(d_i, k)} holds for 1 <=
+k <= n.
