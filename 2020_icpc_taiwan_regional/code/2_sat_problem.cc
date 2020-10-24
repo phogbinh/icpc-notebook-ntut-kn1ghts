@@ -95,8 +95,8 @@ void work()
         return;
     }
 
-    for (int i = 1; i <= K; ++i)
-        printf("%c", sccNum[blue(i)] > sccNum[red(i)] ? 'R' : 'B'); // 2-SAT assignment based on reversed topo order
+    for (int i = 1; i <= K; ++i)                                    // 2-SAT assignment based
+        printf("%c", sccNum[blue(i)] > sccNum[red(i)] ? 'R' : 'B'); // on reversed topo order
     printf("\n");
 }
 
