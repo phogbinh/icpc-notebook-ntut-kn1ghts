@@ -4,6 +4,7 @@
 #   [filename within code directory][tab character \t][subsection title]
 
 [Advanced algorithms]
+2_sat_problem.cc	2-SAT problem
 ida_star.cc	Iterative deepening A* (IDA*)
 
 [Dynamic programming algorithms]

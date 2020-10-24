@@ -7,10 +7,6 @@ path) iff all but 2 of its vertices has even degrees.
 Euler's handshaking lemma: A graph does not have an Euler tour iff it has an ev-
 en number of vertices of odd degrees.
 
-Two conjunctive normal form (2-CNF) theorem: Given the implication graph of a 2-
-CNF, the formula is satisfiable iff there is no variable that belongs to the sa-
-me strongly connected component (SCC) as its negation.
-
 Bipartite graph related theorems:
 (1) Min vertex cover (MVC) = Max cardinality bipartite matching (MCBM).
 (2) Max independent set (MIS) = V - MCBM.
