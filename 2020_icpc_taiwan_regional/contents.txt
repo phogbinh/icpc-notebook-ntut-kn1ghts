@@ -49,7 +49,7 @@ nCr.cc	N choose R combination (nCr)
 Stirling.cc	Stirling's approximation
 
 [String algorithms]
-KMP_UVa11475.cc	Knuth–Morris–Pratt algorithm
+KMP_UVa11475.cc	Knuth Morris Pratt (KMP)
 Longest_Palindromic_Substrings_UVa11151.cc	Longest palindromic substring
 Minimum_Edit_Distance_UVa526.cc	Minimum edit distance
 Z-algorithm_cf126b.cc	Z-algorithm
