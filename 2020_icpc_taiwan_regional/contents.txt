@@ -5,6 +5,7 @@
 
 [Advanced algorithms]
 2_sat_problem.cc	2-SAT problem
+closest_pair_problem.cc	Closest pair problem
 ida_star.cc	Iterative deepening A* (IDA*)
 
 [Dynamic programming algorithms]
