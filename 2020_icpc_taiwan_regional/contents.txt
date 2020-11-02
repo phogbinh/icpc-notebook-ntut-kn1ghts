@@ -31,6 +31,7 @@ graph_edges_property_check.cc	Graph edges property check
 kruskal_UVa11747.cc	Kruskal by David
 max_flow.cc	Max flow
 mcbm.cc	Max cardinality bipartite matching (MCBM)
+max_weight_perfect_bipartite_matching.cc	Max weight perfect bipartite matching
 min_cost_flow.cc	Min-cost flow (MCF)
 mst.cc	Minimum spanning tree (MST)
 scc.cc	Strongly connected component (SCC)
