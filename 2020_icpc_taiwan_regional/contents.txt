@@ -8,6 +8,7 @@
 closest_pair_problem.cc	Closest pair problem
 ida_star.cc	Iterative deepening A* (IDA*)
 lowest_common_ancestor.cc	Lowest common ancestor (LCA)
+Suffix-Automaton-UVa719.cc	Suffix automaton
 
 [Dynamic programming algorithms]
 Knapsack.cc	0-1 knapsack
@@ -60,6 +61,9 @@ disjoint_set_UVa11987.cc	Union-find disjoint sets (UFDS) by David
 fenwick_tree.cc	Binary indexed/fenwick tree (BIT)
 rope_UVa12538.cc	Rope
 Segment_tree_UVa12299.cc	Segment tree
+Suffix-Array-UVa760.cc	Suffix array
+Suffix-tree-UVa11512.cc	Suffix tree
+trie-UVa11362.cc	Trie
 ufds.cc	Union-find disjoint sets (UFDS) by Bill
 
 [Utilities]
