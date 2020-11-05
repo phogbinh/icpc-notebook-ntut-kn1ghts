@@ -8,6 +8,7 @@
 closest_pair_problem.cc	Closest pair problem
 ida_star.cc	Iterative deepening A* (IDA*)
 lowest_common_ancestor.cc	Lowest common ancestor (LCA)
+magic_square_construction.cc	Magic square construction
 Suffix-Automaton-UVa719.cc	Suffix automaton
 
 [Dynamic programming algorithms]
