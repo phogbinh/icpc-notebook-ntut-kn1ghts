@@ -1,19 +1,3 @@
-// O(sqrt(x)) Exhaustive Primality Test
-#include <cmath>
-#define EPS 1e-7
-typedef long long LL;
-bool IsPrimeSlow (LL x)
-{
-  if(x<=1) return false;
-  if(x<=3) return true;
-  if (!(x%2) || !(x%3)) return false;
-  LL s=(LL)(sqrt((double)(x))+EPS);
-  for(LL i=5;i<=s;i+=6)
-  {
-    if (!(x%i) || !(x%(i+2))) return false;
-  }
-  return true;
-}
 // Primes less than 1000:
 //      2     3     5     7    11    13    17    19    23    29    31    37
 //     41    43    47    53    59    61    67    71    73    79    83    89
