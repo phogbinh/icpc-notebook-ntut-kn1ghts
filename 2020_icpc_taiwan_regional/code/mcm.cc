@@ -16,7 +16,6 @@ struct edge_t
 typedef edge_t* edge_ptr;
 
 int V;
-
 edge_t pool[MAX_V*MAX_V*2];
 edge_ptr p_top = pool;
 edge_ptr adj[MAX_V];
