@@ -10,3 +10,4 @@ Script for generating the PDF file is `generate_pdf.py`. The script reads the co
 
 ## Contributors
 * [phogbinh](https://github.com/phogbinh)
+* [TheRiseOfDavid](https://github.com/TheRiseOfDavid)
